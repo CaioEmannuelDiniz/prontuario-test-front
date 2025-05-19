@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+    <!-- Container Médico -->
+    <div class="container_medic">
+        <div class="title_persona_login">Login Para Médicos</div>
+        <div class="circle_img_persona">
+            <img width="64" height="64" src="https://img.icons8.com/?size=100&id=9570&format=png&color=000000" alt="Médico" />
+        </div>
+        <form class="form_persona" action="">
+            <input class="login_input" placeholder="CRM" type="text" name="crm" id="crm">
+            <input class="login_input" placeholder="Senha" type="password" name="senha" id="senha_medic">
+            <label class="checkbox_label_login">
+                <input type="checkbox" class="checkbox">
+                Lembrar-me
+            </label>
+            <a href="">Esqueceu sua senha?</a>
+        </form>
+        <button class="button_login">Entrar</button>
+    </div>
+
+    <!-- Container Paciente -->
+    <div class="container_pacient">
+        <div class="title_persona_login">Login Para Pacientes</div>
+        <div class="circle_img_persona">
+            <img width="64" height="64" src="https://img.icons8.com/?size=100&id=9570&format=png&color=000000" alt="Paciente" />
+        </div>
+        <form class="form_persona" action="">
+            <input class="login_input" placeholder="CPF" type="text" name="cpf" id="cpf">
+            <input class="login_input" placeholder="Senha" type="password" name="senha" id="senha_paciente">
+            <label class="checkbox_label_login">
+                <input type="checkbox" class="checkbox">
+                Lembrar-me
+            </label>
+            <a href="">Esqueceu sua senha?</a>
+        </form>
+        <button class="button_login">Entrar</button>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>
