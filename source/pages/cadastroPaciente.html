@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro Paciente</title>
+    <link rel="stylesheet" href="/source/css/dashbordstyle.css" />
+    <link rel="stylesheet" href="/source/css/styleCadastroPaciente.css" />
+    <link
+      rel="shortcut icon"
+      href="/source/assets/images/iconePagina.png"
+      type="image/png"
+    />
+  </head>
+
+  <body>
+    <header>
+      <div class="header_logo">
+        <a href="">
+          <img
+            width="64"
+            height="64"
+            src="/source/assets/images/iconePagina.png"
+            alt=""
+          />
+        </a>
+      </div>
+      <div class="header_title">Prontuario Médico</div>
+      <div class="header_persona">
+        <img
+          width="40"
+          height="40"
+          src="https://img.icons8.com/?size=100&id=60655&format=png&color=FFFFFF"
+          alt="external-care-prevention-and-care-outline-others-cattaleeya-thongsriphong"
+        />
+      </div>
+    </header>
+    <aside>
+      <div class="container_aside">
+        <div class="container_aside_card">
+          <a href="pesquisarProntuario.html">
+            <img
+              width="32"
+              height="32"
+              src="https://img.icons8.com/?size=100&id=114092&format=png&color=FFFFFF"
+              alt=""
+            />
+            <span class="container_aside_card_title">Prontuarios</span>
+          </a>
+        </div>
+
+        <div class="container_aside_card">
+          <a href="pesquisarPaciente.html">
+            <img
+              width="32"
+              height="32"
+              src="https://img.icons8.com/?size=100&id=61102&format=png&color=FFFFFF"
+              alt=""
+            />
+            <span class="container_aside_card_title">Pacientes</span>
+          </a>
+        </div>
+      </div>
+    </aside>
+    <main>
+      <div class="container_main">
+        <div class="container_image_sexo">
+          <img
+            width="100"
+            height="100"
+            src="https://img.icons8.com/?size=100&id=60655&format=png&color=000000"
+            alt="external-care-prevention-and-care-outline-others-cattaleeya-thongsriphong"
+          />
+        </div>
+        <form class="form_register_patient" action="">
+          <fieldset class="form_register_personal">
+            <legend>Dados Pessoais</legend>
+
+            <div class="form-grid">
+              <!-- Primeira linha: Nome ocupa 100% -->
+              <div class="grid-full">
+                <label for="nome">Nome completo</label>
+                <input
+                  type="text"
+                  id="nome"
+                  name="nomeCompleto"
+                  placeholder="Digite seu nome completo"
+                  required
+                />
+              </div>
+
+              <!-- Segunda linha: Data e Sexo lado a lado -->
+              <div>
+                <label for="data">Data de nascimento</label>
+                <input
+                  type="date"
+                  name="dataNascimento"
+                  id="data"
+                  required
+                />
+              </div>
+
+              <div>
+                <label for="sexo">Sexo/gênero</label>
+                <select id="sexo" name="genero" required>
+                  <option value="" disabled selected>Selecione</option>
+                  <option value="masculino">Masculino</option>
+                  <option value="feminino">Feminino</option>
+                </select>
+              </div>
+
+              <!-- Estado civil -->
+              <div class="grid-full">
+                <label for="estado_civil">Estado civil</label>
+                <select name="estadoCivil" id="estado_civil" required>
+                  <option value="" disabled selected>Selecione</option>
+                  <option value="solteiro">Solteiro(a)</option>
+                  <option value="casado">Casado(a)</option>
+                  <option value="divorciado">Divorciado(a)</option>
+                  <option value="viuvo">Viúvo(a)</option>
+                </select>
+              </div>
+
+              <!-- CPF e RG -->
+              <div>
+                <label for="cpf">CPF</label>
+                <input
+                  type="text"
+                  name="cpf"
+                  id="cpf"
+                  maxlength="14"
+                  placeholder="000.000.000-00"
+                  pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}"
+                  required
+                />
+              </div>
+
+              <div>
+                <label for="rg">RG (opcional)</label>
+                <input
+                  type="text"
+                  name="rg"
+                  id="rg"
+                  maxlength="14"
+                  placeholder="00.000.000-0"
+                  pattern="\d{1,2}\.?\d{3}\.?\d{3}-?\d{1}"
+                />
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="form_register_endereco">
+            <legend>Dados Endereço</legend>
+            <div class="form-grid">
+              <label for="endereco">Endereço:</label>
+              <input type="text" id="endereco" name="endereco" required />
+
+              <label for="numero">Número:</label>
+              <input type="text" id="numero" name="numero" required />
+
+              <label for="bairro">Bairro:</label>
+              <input type="text" id="bairro" name="bairro" required />
+
+              <label for="cidade">Cidade:</label>
+              <input type="text" id="cidade" name="cidade" required />
+
+              <label for="estado">Estado:</label>
+              <input type="text" id="estado" name="estado" required />
+
+              <label for="cep">CEP:</label>
+              <input
+                type="text"
+                id="cep"
+                name="cep"
+                pattern="\d{5}-?\d{3}"
+                placeholder="00000-000"
+                required
+              />
+
+              <fieldset class="form_register_contato">
+                <legend>Dados Contatos</legend>
+                <label for="telefone">Telefone</label>
+                <input
+                  type="tel"
+                  id="telefone"
+                  name="telefone"
+                  placeholder="(99) 99999-9999"
+                  pattern="\(\d{2}\)\s?\d{4,5}-\d{4}"
+                  title="Formato esperado: (99) 99999-9999"
+                  required
+                />
+
+                <label for="email">E-mail</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="seuemail@exemplo.com"
+                  required
+                />
+              </fieldset>
+            </div>
+          </fieldset>
+
+          <fieldset class="form_register_clinical">
+            <legend>Informações Clínicas Iniciais</legend>
+
+            <div class="form-grid">
+              <!-- Alergias -->
+              <div class="grid-full">
+                <label for="alergias">Alergias conhecidas</label>
+                <input
+                  type="text"
+                  name="alergias"
+                  id="alergias"
+                  placeholder="Descreva alergias (ex: medicamentos, alimentos)"
+                />
+              </div>
+
+              <!-- Doenças pré-existentes -->
+              <div class="grid-full">
+                <label for="doencas">Doenças pré-existentes</label>
+                <input
+                  type="text"
+                  name="doencas"
+                  id="doencas"
+                  placeholder="Ex: hipertensão, diabetes, asma"
+                />
+              </div>
+
+              <!-- Medicamentos de uso contínuo -->
+              <div class="grid-full">
+                <label for="medicamentos">Medicamentos de uso contínuo</label>
+                <input
+                  type="text"
+                  name="medicamentos"
+                  id="medicamentos"
+                  placeholder="Ex: losartana, insulina, etc."
+                />
+              </div>
+
+              <!-- Histórico de cirurgias ou internações -->
+              <div class="grid-full">
+                <label for="historico_cirurgias"
+                  >Histórico de cirurgias ou internações</label
+                >
+                <input
+                  type="text"
+                  name="historico_cirurgias"
+                  id="historico_cirurgias"
+                  placeholder="Descreva procedimentos anteriores, datas se possível"
+                />
+              </div>
+
+              <!-- Tipo sanguíneo -->
+              <div>
+                <label for="tipo_sanguineo">Tipo sanguíneo</label>
+                <select name="tipoSanguineo" id="tipo_sanguineo">
+                  <option value="" disabled selected>Selecione</option>
+                  <option value="A+">A+</option>
+                  <option value="A-">A-</option>
+                  <option value="B+">B+</option>
+                  <option value="B-">B-</option>
+                  <option value="AB+">AB+</option>
+                  <option value="AB-">AB-</option>
+                  <option value="O+">O+</option>
+                  <option value="O-">O-</option>
+                </select>
+              </div>
+
+              <!-- Peso -->
+              <div>
+                <label for="peso">Peso (kg)</label>
+                <input
+                  type="number"
+                  name="peso"
+                  id="peso"
+                  step="0.1"
+                  min="0"
+                  max="500"
+                  placeholder="Ex: 70.5"
+                />
+              </div>
+
+              <!-- Altura -->
+              <div>
+                <label for="altura">Altura (m)</label>
+                <input
+                  type="number"
+                  name="altura"
+                  id="altura"
+                  step="0.1"
+                  min="1"
+                  max="250"
+                  placeholder="Ex: 1.70"
+                />
+              </div>
+
+              <!-- IMC (calculado automaticamente, por exemplo) -->
+              <div>
+                <label for="imc">IMC</label>
+                <input
+                  type="text"
+                  name="imc"
+                  id="imc"
+                  placeholder="Cálculo automático"
+                  readonly
+                />
+              </div>
+            </div>
+          </fieldset>
+
+          <div class="form-buttons">
+            <button type="reset" class="btn-excluir">Excluir</button>
+            <button type="submit" class="btn-salvar">Salvar</button>
+          </div>
+        </form>
+      </div>
+    </main>
+    <footer>
+      <p>
+        Sistema de Prontuário Médico &copy; 2025 — Projeto acadêmico
+        desenvolvido por Caio Emanuel, Eduardo Araujo e Lucas Porto | UNIFACISA
+      </p>
+    </footer>
+  </body>
+
+  <script src="/source/js/cadastroPaciente.js"></script>
+</html>

@@ -83,8 +83,8 @@ form label {
 }
 
 .form_register_patient {
-  overflow-y: auto;
-  height: 450px;
+  overflow-y: scroll;
+  height: 420px;
 }
 
 /* Contatos */

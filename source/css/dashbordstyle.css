@@ -66,8 +66,16 @@ aside {
   display: flex;
   align-items: center;
   margin-top: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
   padding: 10px;
   cursor: pointer;
+}
+
+.container_aside_card a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
 }
 
 .container_aside_card:hover {
@@ -129,7 +137,7 @@ main {
   border-radius: 10px;
 }
 
-.container_main_add_button:hover{
+.container_main_add_button:hover {
   cursor: pointer;
   border: 1px solid #ccc;
   border-radius: 10px;
